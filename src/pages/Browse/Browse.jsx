@@ -34,8 +34,8 @@ const Browse = () => {
       }, [movies]);
 
     useEffect(() => {
-        if (searchTerm, initialQuery) {
-            fetch(`https://omdbapi.com/?s=${searchTerm, initialQuery}&apikey=e2320e00`)
+        if (searchTerm || initialQuery) {
+            fetch(`https://omdbapi.com/?s=${searchTerm || initialQuery}&apikey=e2320e00`)
             .then(response => response.json())
             .then(data => {
                 setMovies(data.Search || data.results || []);
