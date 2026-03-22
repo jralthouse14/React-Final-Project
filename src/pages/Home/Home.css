@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home__container {
+   background-color: rgb(125, 8, 8);
+   display: flex;
+}
+
+.home__body {
+    padding-top: 44px;
+    padding-right: 200px;
+}
+
+.welcome__message {
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 52px;
+    padding-bottom: 16px;
+    margin-left: 16px;
+    margin-right: 40px;
+    text-align: center;
+    color: rgb(238, 221, 92);
+    animation: fade 1s ease;
+}
+
+/*
+
+SEARCH FROM HOME PAGE
+
+*/
+
+.search-movies1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 88px;
+}
+
+.search-input1 {
+    position: relative;
+    padding: 16px;
+    border: none;
+    border-radius: 32px;
+    font-size: 20px;
+    width: 62%;
+}
+
+.search__submit1 {
+    position: absolute;
+    padding: 12px;
+    margin-left: 30%;
+    border: none;
+    background: none;
+}
+
+.fa-magnifying-glass {
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(120, 0, 80);
+}
+
+.fa-magnifying-glass:hover {
+    color: rgb(245, 69, 69);
+    transition: all 300ms ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+
+VIDEO CAMERA EFFECTS
+
+*/
+
+.video__image {
+    font-size: 160px;
+    margin-top: 180px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    color: rgb(42, 167, 198);
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* 
+
+RESPONSIVE SIZES
+
+*/
+
+
+/* TABLETS AND SMALLER COMPUTERS */
+
+@media (max-width: 1200px) {
+    .home__container {
+        flex-direction: column;
+    }
+
+    .video__image, .home__body {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .video__image {
+        padding-top: 16px;
+        font-size: 90px;
+    }
+
+    .welcome__message {
+        padding: 0 48px;
+        font-size: 48px;
+    }
+
+
+    .search-input1 {
+        width: 50%;
+    }
+
+    .search__submit1 {
+        margin-left: 42%;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 847px) {
+    .welcome__message {
+        padding: 0 24px;
+    }
+
+    .search-input1 {
+        width: 60%;
+    }
+
+    .search__submit1 {
+        margin-left: 44%;
+    }
+}
+
+
+
+/* SMALL TABLETS */
+
+@media (max-width: 650px) {
+    .welcome__message {
+        font-size: 40px;
+    }
+
+    .video__image {
+        font-size: 90px;
+    }
+
+    .search-input1 {
+        width: 80%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .search__submit1 {
+        margin-left: 56%;
+        padding: 8px;
+    }
+}
+
+
+/* PHONES */
+
+@media (max-width: 450px) {
+    .video__image {
+        font-size: 80px;
+    }
+
+    .welcome__message {
+        margin: 0 auto;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .search__submit1 {
+        margin-left: 48%;
+    }
+}

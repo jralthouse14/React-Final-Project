@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.back-button {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 24px;
+    background-color:  rgb(193, 180, 78);
+    color:  rgb(5, 5, 48);
+}
+
+.back-button:hover {
+    color: rgb(249, 231, 94);
+    background-color: rgb(5, 5, 48);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+p {
+    font-size: 18px;
+    letter-spacing: 1.25px;
+    line-height: 26px;
+    max-width: 600px;
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 48px;
+    min-height: 74vh;
+    background-image:
+        linear-gradient(rgba(40, 0, 60, 0.88)),
+        url("https://w7.pngwing.com/pngs/130/1021/png-transparent-movie-logo-movie-logo-film-tape-cinema.png");
+        background-size: 56%;
+}
+
+.movie-image{
+    max-width: 28%;
+    max-height: 48vh;
+    margin-top: 24px;
+    padding-bottom: 30px;
+}
+
+.title__details, .movie-details {
+    display: flex;
+    padding-top: 24px;
+    animation: fade 1s ease;
+}
+
+.movie-description {
+    color: white;
+    width: 90%;
+    margin-left: 44px;
+}
+
+.plot {
+    margin-top: 20px;
+}
+
+.credits {
+    margin-top: 20px;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+
+LOADING STATE FOR MOVIE DETAILS
+
+*/
+
+.loading__movieDetails {
+    min-height: 80vh;
+    background-image:
+        linear-gradient(rgba(40, 0, 60, 0.88)),
+        url("https://w7.pngwing.com/pngs/130/1021/png-transparent-movie-logo-movie-logo-film-tape-cinema.png");
+        background-size: 56%;
+}
+
+.loading__movies--message2 { 
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 180px;
+    font-size: 72px;
+    margin-left: 44px;
+    margin-right: 40px;
+    animation: pulse 2s infinite;
+}
+
+.camera__figure2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 52px;
+    padding-top: 72px;
+}
+
+.loading__camera2 {
+    display: flex;
+    font-size: 64px;
+    color: rgb(238, 221, 92);
+    border: 1px solid;
+    border-color: #fff;
+    animation: spin 1.5s linear infinite;
+}
+
+.loading__camera--container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*
+
+RESPONSIVE SIZES
+
+*/
+
+
+/* TABLETS AND SMALL COMPUTERS */
+
+@media (max-width: 900px) {
+    .back-button {
+        font-size: 16px;
+        padding: 6px 12px;
+        letter-spacing: 1px;
+    }
+
+    .movie-image {
+        min-width: 220px;
+    }
+
+    .title__details {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .credits {
+        font-size: 18px;
+    }
+}
+
+
+/* SMALL TABLETS AND BIG PHONES */
+
+@media (max-width: 750px) {
+    .movie-details {
+        flex-direction: column;
+    }
+
+    .movie-image {
+        margin: 0 auto;
+    }
+}
+
+
+/* PHONES */
+
+@media (max-width: 540px) {
+    .movie-container {
+        padding: 30px 12px;
+    }
+
+    .movie-description {
+        max-width: 84%;
+    }
+}
+
+
+/* SMALLER PHONES */
+
+@media (max-width: 300px) {
+    .movie-description {
+        min-width: 220px;
+        padding-right: 30px;
+    }
+}
+
+
+/*
+
+LOADING RESPONSE SIZES
+
+*/
+
+@media (max-width: 550px) {
+
+    .loading__movies2 {
+        padding: 180px 0;
+    }
+    
+    .loading__movies--message2 {
+        font-size: 48px;
+    }
+
+    .camera__figure2 {
+        padding: 56px 32px;
+    }
+
+    .loading__camera2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 460px) {
+    .loading__movies--message2 {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+
+    .camera__figure2 {
+        padding: 56px 20px;
+    }
+
+    .loading__camera2 {
+        font-size: 36px;
+    }
+}

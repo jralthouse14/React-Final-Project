@@ -1,0 +1,147 @@
+.container__footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__img {
+    width: 160px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 100px;
+}
+
+.footer__notes {
+    display: flex;
+}
+
+.footer__copyright--full {
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+}
+
+.footer__copyright {
+    color: white;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.nav__link2 {
+    display: inline-block;
+    position: relative;
+    margin-left: 32px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nav__link2:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.nav__links2 {
+   display: flex;
+   flex-direction: column;
+   margin-top: 40px;
+   margin-right: 136px;
+}
+
+
+/*
+
+RESPONSIVE SIZES
+
+*/
+
+
+/* SMALLER COMPUTERS AND TABLETS */
+
+
+@media (max-width: 992px) {
+
+    .nav__links2 {
+        display: none;
+    }
+
+    .footer__copyright--full {
+        min-width: 60%;
+    }
+
+    .footer__copyright {
+        min-width: 50%;
+        margin-right: 18%;
+    }
+}
+
+
+/* SMALLER TABLETS */
+@media (max-width: 815px) {
+
+    .footer__img {
+        margin: 0 auto;
+        margin-left: 10%;
+    }
+    
+    .footer__copyright {
+        min-width: 60%;
+        text-align: center;
+    }
+}
+
+
+/* SMALL PHONES AND TABLETS */
+@media (max-width: 671px) {
+
+    .footer__copyright--full {
+        min-width: 54%;
+    }
+}
+
+
+/* SMALLER PHONES */
+@media (max-width: 518px) {
+
+    .container__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__img {
+        padding: 4px;
+        margin-left: 33%;
+    }
+
+    .footer__copyright--full {
+        margin: 0 auto;
+        margin-bottom: 24px;
+        min-width: 270px;
+    }
+
+    .footer__copyright {
+        margin: 0 auto;
+        margin-bottom: 4px;
+        max-width: 80%;
+    }
+}
+
+
+/*TINY ELECTRONIC DEVICES */
+@media (max-width: 350px) {
+
+    .footer__img {
+        margin-left: 25%;
+    }
+}
+
