@@ -34,7 +34,7 @@ const Browse = () => {
       }, [movies]);
 
     useEffect(() => {
-        if (searchTerm, initialQuery) {
+        if (searchTerm || initialQuery) {
             fetch(`https://omdbapi.com/?s=${searchTerm || initialQuery}&apikey=e2320e00`)
             .then(response => response.json())
             .then(data => {
@@ -44,7 +44,7 @@ const Browse = () => {
         } else {
             setMovies([]);
         }
-    }, [searchTerm, initialQuery]);
+    }, [searchTerm || initialQuery]);
 
     const sortedMovies = useMemo(() => {
         const sorted = [...movies].sort((a, b) => {
@@ -59,6 +59,7 @@ const Browse = () => {
             else if (sortType === 'z-a') {
                 return b.Title.localeCompare(a.Title);
             }
+            return 0;
         });
         return sorted;
     }, [movies, sortType]);
