@@ -75,11 +75,9 @@ RESPONSIVE SIZES
     }
 }
 
-
 /* SMALLER PHONES */
 
-@media (max-width: 518px) {
-    
+@media (max-width: 670px) {
     .movie-card {
         max-width: 70%;
     }

@@ -8,7 +8,7 @@
 
 .contact-container {
     display: flex;
-    min-height: 61vh;
+    min-height: 80vh;
     background-color: rgb(125, 8, 8);
     padding: 24px;
 }

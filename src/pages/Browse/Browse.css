@@ -8,6 +8,7 @@
 
 .browse__body {
     background-color: rgb(125, 8, 8);
+    padding-bottom: 120px;
 }
 
 .browse__header {
@@ -101,7 +102,7 @@ LOADING STATE FOR MOVIE LIST
 .loading__movies {
     background-color: rgb(125, 8, 8);
     padding: 48px;
-    min-height: 62vh;
+    min-height: 80vh;
 }
 
 .loading__movies--message { 
