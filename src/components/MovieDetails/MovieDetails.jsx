@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./MovieDetails.css"
+import { useNavigate } from 'react-router-dom';
 import { Link, useParams } from 'react-router-dom';
 import { FaClapperboard } from 'react-icons/fa6';
 import Footer from '../Footer/Footer';
@@ -9,8 +10,13 @@ function MovieDetails() {
   const [movie, setMovie] = useState();
   const API_KEY = "e2320e00";
   const [isLoading, setIsLoading] = useState(true);
+   const addDefaultImg = (ev) => {
+    ev.target.src = "https://previews.123rf.com/images/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg";
+  };
+  const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
       setIsLoading(true);
       const timer = setTimeout(() => {
         setIsLoading(false);
@@ -52,11 +58,11 @@ function MovieDetails() {
     <>
     <div className="movie-container">
       <Link to = "/browse">
-      <button className="back-button">BROWSE MORE MOVIES</button>
+      <button className="back-button" onClick={() => navigate(-1)}>BROWSE MORE MOVIES</button>
       </Link>
       <h1 className="title__details">{movie.Title}</h1>
       <div className="movie-details">
-          <img className="movie-image" src={movie.Poster} alt={movie.Title} />
+          <img className="movie-image" src={movie.Poster} alt={movie.Title} onError={addDefaultImg} />
         <div className="movie-description">
           <p className="credits"><b>Released: </b> {movie.Year}</p>
           <p className="plot">{movie.Plot}</p>

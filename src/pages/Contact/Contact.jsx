@@ -8,6 +8,7 @@ const Contact = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setIsLoading(true);
         const timer = setTimeout(() => {
             setIsLoading(false);

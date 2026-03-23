@@ -26,6 +26,7 @@ const Browse = () => {
     const [sortType, setSortType] = useState('');
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setIsLoading(true);
         const timer = setTimeout(() => {
           setIsLoading(false);
@@ -113,7 +114,7 @@ const Browse = () => {
                 <MovieSort setSortType={setSortType} />
             </div>
             <div className="movies__results">
-                <MovieList movies={sortedMovies} />
+                <MovieList movie={sortedMovies} />
             </div>
         </div>
         <Footer />
